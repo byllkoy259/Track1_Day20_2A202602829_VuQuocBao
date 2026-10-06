@@ -2,11 +2,18 @@
 
 > Công cụ: Claude.
 
-| Phase | AI hỗ trợ | Tôi quyết định |
-|---|---|---|
-| 0 | Đối chiếu persona/core job với khảo sát (n = 7), soạn nháp mục 00 | Chọn use case phỏng vấn thử vì 6/7 người khảo sát lo nhất là "không biết câu trả lời đủ tốt chưa" và đây là chức năng được chọn dùng nhiều nhất; thu hẹp persona; chỉnh N = 4 |
-| 1 | Brainstorm ứng viên core action, soạn nháp 2 Core Action Card (A, B) | Chọn A — hoàn thành phiên phỏng vấn thử theo JD, vì dễ quan sát, lặp lại theo từng JD và sát với cách nhóm đang build prototype |
-| 2 | Soạn nháp Action Nature Card, liệt kê các dạng hành vi | Chọn "phản ứng theo sự kiện"; tự viết kết luận cadence |
-| 3 | Soạn nháp metric system, phản biện retention cho khớp cadence | Giữ window 30 ngày vì người đang tích cực ứng tuyển thường có lời mời phỏng vấn tiếp theo trong khoảng một tháng (giả định, cần kiểm chứng) |
-| 4 | Phác loop 2 chu kỳ, gợi ý tên event và tiêu chí nghiệm thu | Tự viết metric hypothesis (retention 30 ngày tăng) |
-| 5 | Soát bài theo 4 gate, chỉ ra chỗ lệch và câu chữ | Đồng ý sửa các chỗ lệch; giữ nguyên câu metric hypothesis |
+**AI đã giúp tôi ở đâu?**
+Đối chiếu persona và core job với dữ liệu khảo sát (n = 7); brainstorm ứng viên core action và soạn nháp 2 Core Action Card để so sánh; soạn nháp Action Nature Card, metric system, retention 6 thành phần, loop và bảng event; soát chéo toàn bài theo 5 gate.
+
+**AI sai, hời hợt hoặc đề xuất metric sai nature ở đâu?**
+- Lần đầu AI chấm ứng viên A chỉ 3/5 tiêu chí; sau khi tôi chọn A, AI viết lại core value để A đạt 4/5 — tôi phải tự kiểm tra lập luận đó có đứng được không, không nhận điểm sẵn.
+- Khi bỏ phương án B, AI còn sót câu core value của B trong bảng 4 khái niệm, làm hai chỗ nói hai giá trị khác nhau.
+- Các ngưỡng 50 từ / 20 giây, activation 72h và retention 30 ngày là AI tự đặt, không có dữ liệu — chỉ là giả định cần kiểm chứng.
+- AI đề xuất NSM đếm theo tuần, dễ mâu thuẫn với cadence theo sự kiện; phải ghi rõ tuần chỉ là nhịp báo cáo của team.
+- Bản nháp của AI có chỗ không khớp: tên counter-metric khác nhau giữa mục 01 và 03, ghi "retention ở Phase 4" thay vì mục 04, còn sót khối acceptance criteria trống.
+
+**Tôi đã tự sửa hoặc quyết định lại điều gì?**
+- Chọn use case phỏng vấn thử (6/7 người lo "không biết câu trả lời đủ tốt chưa") và chọn core action A — hoàn thành phiên phỏng vấn thử theo JD.
+- Đổi số câu mỗi phiên thành N = 4 cho khớp prototype; sửa mô tả dự án.
+- Tự viết kết luận cadence; sửa nhịp đo từ "số phiên hoàn thành" thành "theo từng chu kỳ chuẩn bị phỏng vấn" vì đếm phiên mâu thuẫn với nhận định "nhiều phiên ≠ nhiều value".
+- Tự viết metric hypothesis (retention đợt ứng tuyển 30 ngày tăng nhờ kho câu chuyện STAR đã lưu); giữ window 30 ngày nhưng ghi rõ là giả định.
